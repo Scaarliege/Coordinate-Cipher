@@ -14,15 +14,13 @@ This cipher is based on a couple of very old ciphers, namely the Vigenere and Po
    ...<br>
    Z
 
-2. Second you select any instance of the letter you're trying to encrypt
+2. Second you select any instance of the letter you're trying to encrypt (for this example we will use the letter "A")
 
    A B C ... Z<br>
    B **A** B<br>
    C B A<br>
    ...<br>
    Z
-
-   for this example we will use the letter "A"
 
 3. Third you derive the x-most and y-most points corresponding to your letter
 
