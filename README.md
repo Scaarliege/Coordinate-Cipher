@@ -19,28 +19,14 @@ git clone https://github.com/Scaarliege/Coordinate-Cipher.git
 cd Coordinate-Cipher
 ```
 
-### Encrypt a Message
-
-Run the following command to encrypt a plaintext message:
+### Run The Program:
 
 ```bash
-python coordExec.py --mode encrypt --message "Hello World"
+python CoordExec
 ```
-
-### Decrypt a Message
-
-To decrypt a message (provide coordinate pairs as the input):
-
-```bash
-python coordExec.py --mode decrypt --message "0,1 1,2 2,3 ..."
-```
-
-> **Note:** The exact coordinate format expected will depend on how the encryption output is structured.
 
 ## Future Plans
 
-- Add support for customizable grid layouts and alphabets
 - Implement a GUI for interactive encryption/decryption
 - Support batch file encryption
 - Add unit tests and improve error handling
-- Include support for punctuation and non-alphabetic characters
