@@ -73,7 +73,6 @@ This cipher is based on a couple of very old ciphers, namely the Vigenere and Po
 
 ```bash
 git clone https://github.com/Scaarliege/Coordinate-Cipher.git
-cd Coordinate-Cipher
 ```
 
 ### Run The Program:
