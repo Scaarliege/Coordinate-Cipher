@@ -2,9 +2,67 @@
 
 ## How It Works
 
-Coordinate Cipher is a custom encryption method that maps characters to coordinate pairs on a grid, similar to the classic Polybius square cipher. The grid is defined with a specific layout, and each character in the message corresponds to a pair of coordinates representing its position in the grid.
+This cipher is based on a couple of very old ciphers, namely the Vigenere and Polybius Square, but differers from those two in the way its set up
 
-The main logic is contained in `coordLib.py`, which handles both encryption and decryption. Characters are mapped to and from their respective coordinate representations, allowing reversible transformation of messages.
+### Encryption
+
+1. First you make a grid that is 26 by 26 and looks like this
+
+   A B C ... Z<br>
+   B A B<br>
+   C B A<br>
+   ...<br>
+   Z
+
+2. Second you select any instance of the letter you're trying to encrypt
+
+   A B C ... Z<br>
+   B **A** B<br>
+   C B A<br>
+   ...<br>
+   Z
+
+   for this example we will use the letter "A"
+
+3. Third you derive the x-most and y-most points corresponding to your letter
+
+   A **B** C ... Z<br>
+   **B** A B<br>
+   C B A<br>
+   ...<br>
+   Z
+
+   in our case these points are B and B so A = BB
+### Decryption
+
+1. Setup your grid using the key (we'll use a-z for this example):
+   
+   A B C ... Z<br>
+   B A B<br>
+   C B A<br>
+   ...<br>
+   Z
+
+2. Get your two letter string and locate them in the key (in this case we'll use "BB"):
+   
+   A **B** C ... Z<br>
+   **B** A B<br>
+   C B A<br>
+   ...<br>
+   Z
+   > The first letter corresponds to the x position and the second letter corresponds to the y
+
+3. Find the crossing point of those two letters:
+
+   A B C ... Z<br>
+   B **A** B<br>
+   C B A<br>
+   ...<br>
+   Z
+   
+### Key Image:
+
+![Screenshot_20250425-143123](https://github.com/user-attachments/assets/7d143468-51d1-47a1-a949-e1c0a3ce5f73)
 
 ## How to Use
 
