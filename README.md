@@ -6,15 +6,16 @@ This cipher is based on a couple of very old ciphers, namely the Vigenere and Po
 
 ### Encryption
 
-1. First you make a grid that is 26 by 26 and looks like this
+1. First you make a grid that is 26 by 26 and looks like  (we'll use a-z for this example)
 
    A B C ... Z<br>
    B A B<br>
    C B A<br>
    ...<br>
    Z
+   > You can randomly shuffle this a-z key to make a new key so a-z is not the only option
 
-2. Second you select any instance of the letter you're trying to encrypt (for this example we will use the letter "A")
+3. Second you select any instance of the letter you're trying to encrypt (for this example we will use the letter "A")
 
    A B C ... Z<br>
    B **A** B<br>
@@ -22,7 +23,7 @@ This cipher is based on a couple of very old ciphers, namely the Vigenere and Po
    ...<br>
    Z
 
-3. Third you derive the x-most and y-most points corresponding to your letter
+4. Third you derive the x-most and y-most points corresponding to your letter
 
    A **B** C ... Z<br>
    **B** A B<br>
